@@ -1,0 +1,270 @@
+:root {
+  /* light blue colors */
+  --light-blue-100: #f3f5fc;
+  --light-blue-200: #EFF1FA;
+  --light-blue-300: #E9ECF8;
+  --light-blue-400: #AAB2D5;
+  --light-blue-500: #757FB2;
+
+  /* dark blue colors */
+  --dark-blue-100: #609ED4;
+  --dark-blue-200: #356EA9;
+  --dark-blue-300: #0A3871;
+  --dark-blue-400: #072B61;
+  --dark-blue-500: #052051;
+
+  /* gray color */
+  --gray-100: #CED4DA;
+  --gray-200: #ADB5BD;
+  --gray-300: #868E96;
+  --gray-400: #495057;
+  --gray-500: #343A40;
+  
+  /* font */
+  --inter: 'Inter', sans-serif;
+}
+
+*{
+  background: var(--light-blue-100);
+  font-family: var(--inter);
+  font-weight: 400;
+  font-size: 32px;
+}
+
+/** HEADER */
+.hero {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  gap: 38%;
+}
+
+.logo {  
+  width: 5%;
+  padding-top: 10px;
+  margin-left: 10px;
+}
+
+.hero > .text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+/** MAIN */
+body{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+main{
+  width: 98%;
+  display: flex;
+  gap: 2rem;
+  padding: 20px;
+  justify-content: center;
+}
+
+.section-1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.box-result{
+  height: 77%;
+}
+
+.text-area {
+  width: 97%;
+  border: none;
+  resize: none;
+  outline: none;
+  font-family: var(--inter);
+  font-weight: normal;
+  line-height: 1.5rem;
+  text-transform: lowercase;
+}
+
+.text-area:focus{
+  outline: none;
+}
+
+::placeholder{
+  color: #0A3871;
+}
+
+.mensaje{
+  background: white;
+  background-image: url(/img/Muñeco.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 24px;
+  color: #0A3871;
+  resize: none;
+  height: 100%;
+  margin-top: 20px;
+  padding-top: 16px;
+  padding-left: 20px;
+  
+}
+
+.mensaje:focus{
+  outline: none;
+}
+
+.botones{
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.btn {
+  width: 328px;
+  height: 67px;
+  border-radius: 24px;
+  font-size: 24px;
+  line-height: 1.9rem;
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: 300ms;
+}
+
+#btn-encriptar {
+  background-color: var(--dark-blue-300);
+  border: 1px solid var(--dark-blue-300);
+  color: #ffffff;
+}
+
+#btn-encriptar:hover {
+  background-color: var(--dark-blue-400);
+}
+
+#btn-desencriptar {
+  color: var(--dark-blue-300);
+  background-color: #D8DFE8;
+  box-sizing: border-box;
+  border: 1px solid #0a3871;
+}
+
+#btn-desencriptar:hover {
+  background-color: var(--light-blue-400)
+}
+
+.box-copiar{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.copiar {
+  width: 336px;
+  height: 67px;
+  border: 1px solid #0A3871;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.advertencia {
+  width: 100%;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--gray-400);
+  opacity: .8;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.advertencia img {
+  width: 1.1rem;
+  opacity: .8;
+}
+
+
+.decoder-buttons {
+  width: 100%;
+  height: 9%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/** FOOTER */
+
+footer {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+}
+
+footer a {
+  color: black;
+  /* background-color: black; */
+}
+
+
+/** smartphones query */
+
+@media (max-width: 767px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* decoder section */
+
+  .decoder-textarea {
+    height: 60%;
+  }
+  .decoder-textarea textarea {
+    height: 100%;
+  }
+
+  .decoder-buttons {
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  /* result section */
+  .result {
+    width: 100%;
+    height: 20%;
+    margin: 0;
+  }
+  .result-show img {
+    display: none;
+  }
+
+  .result-textarea {
+    width: 90%;
+  }
+
+  .result-textarea textarea {
+    width: 100%;
+    height: 85%;
+    margin-bottom: 1rem;
+  }
+}
+
+

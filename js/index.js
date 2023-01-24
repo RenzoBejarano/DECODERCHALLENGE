@@ -48,3 +48,10 @@ function desencriptar(stringDesencriptado){
   }
   return stringDesencriptado
 }
+
+function clipboard(){
+  navigator.clipboard.writeText(mensaje.value);
+  mensaje.value = "";
+  mensaje.style.backgroundImage = "url(/img/Muñeco.png)"
+  return alert("Texto copiado!!");
+}
